@@ -4,7 +4,7 @@
 <div class="col-md-8">
         {% for post in postagens_hoje %}
             <div class="post">
-                <h2><a href="">{{ post.titulo }}</a></h2>
+                <h2><a href="{% url 'post_show' id=post.pk %}">{{ post.titulo }}</a></h2>
                 <p>{{ post.texto|linebreaksbr }}</p>
                 <div class="date">
                         <p>published: {{ post.data_publicacao }}</p>
