@@ -1,0 +1,15 @@
+{% extends 'blog/index.html' %} 
+
+{% block content %}
+<div class="col-md-8">
+        {% for post in postagens_hoje %}
+            <div class="post">
+                <h2><a href="">{{ post.titulo }}</a></h2>
+                <p>{{ post.texto|linebreaksbr }}</p>
+                <div class="date">
+                        <p>published: {{ post.data_publicacao }}</p>
+                </div>
+            </div>
+        {% endfor %}
+</div>
+{% endblock %}
